@@ -1,0 +1,724 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    /* line-height: 1.5rem; */
+    text-decoration: none;
+}
+body {
+    height: 2000px;
+    background-color: #fff;
+    min-width: 1200px;
+}
+/* banner****************************************************** */
+.container .banner {
+    width: 1200px;
+    height: 430px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    /* display: flex; */
+    position: relative;
+    overflow: hidden;
+}
+/* 左边导航********************** */
+.container .banner .left li:hover {
+    background-color: #1abc9c;
+}
+.container .banner .left li a:hover {
+    color: #fff;
+}
+.container .banner .left {
+    position: absolute;
+    width: 230px;
+    height: 430px;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.555);
+    z-index: 1;
+}
+.container .banner .left li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 30px;
+    overflow: hidden;
+    /* background-color: rgba(117, 117, 117, 0.493); */
+}
+.container .banner .left li strong {
+    font-size: 14px;
+    padding-right: 10px;
+    color: #fff;
+    font-weight: normal;
+}
+.container .banner .left li a {
+    font-size: 12px;
+    padding-right: 5px;
+    color: #d3d3d3;
+}
+.container .banner .left li > span {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+}
+.icon_more {
+    width: 30px;
+    height: 30px;
+    background-image: url('../imgs/more_icon.png');
+    background-size: 22px;
+    background-position: center center;
+}
+/*鼠标移入显示隐藏的内容 ************************************* */
+.container .banner .left li:hover .content{
+    left: 0px;
+}
+.container .banner .left li:hover .contentBox{
+    width: 970px;
+}
+.contentBox {
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 230px;
+    width: 0px;
+    height: 430px;
+}
+.container .banner .left li .content {
+    width: 970px;
+    height: 430px;
+    padding: 20px 20px 20px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: -970px;
+    display: flex;
+    background-color: rgba(230, 230, 230, 0.582);
+    transition: all 1s;
+}
+.container .banner .left li .content .title {
+    font-size: 14px;
+    color: #666666;
+    width: 100%;
+}
+.container .banner .left li .content .title span {
+    font-size: 12px;
+    margin-left: 5px;
+    color: #999;
+}
+.container .banner .left li .content .item {
+    margin-right: 10px;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    background-color: #E4E4E4;
+}
+.container .banner .left li .content .item > span {
+    display: block;
+    width: 100px;
+    line-height: 100px;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
+.container .banner .left li .content .item > div {
+    background-color: #fff;
+    padding: 10px 10px;
+    width: 200px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+.container .banner .left li .content .item > div h4 {
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    color: #666666;
+}
+.container .banner .left li .content .item > div p:first-of-type {
+    font-size: 12px;
+    width: 100%;
+    color: #999999;
+}
+.container .banner .left li .content .item > div p:last-of-type {
+    font-size: 14px;
+    width: 100%;
+    color: #f04844;
+}
+/* banner******************************* */
+.container .banner .right {
+    width: 1200px;
+    height: 430px;
+    background-color: #f2f2f2;
+    position: relative;
+    /* overflow: hidden; */
+    position: absolute;
+}
+.container .banner .right ol {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    height: 430px;
+    position: relative;
+    left: 0px;
+}
+.container .banner .right ol > li {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 130px 100px 360px ;
+    width: 1200px;
+    height: 430px;
+    left: 1200px;
+    background-color: #F2F2F2;
+}
+.container .banner .right ol > li:first-of-type {
+    left: 0;
+}
+.container .banner .right ol li img {
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+.container .banner .right ol li h4 {
+    font-size: 36px;
+    width: 100%;
+    color: #999;
+    font-weight: 600;
+}
+.container .banner .right ol li p {
+    font-size: 24px;
+    color: #999999;
+    width: 100%;
+}
+.container .banner .right ol li button {
+    width: 200px;
+    height: 45px;
+    background-color: #f04844;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+}
+.container .banner .right button span {
+    font-size: 15px;
+}
+/* banner  指示器***************************** */
+.container .banner .right ul {
+    width: 970px;
+    height: 10px;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.container .banner .right .banner_tab {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(216, 216, 216);
+    border-radius: 50%;
+    /* border: 1px rgb(216, 216, 216) solid; */
+    margin: 0 5px;
+}
+.container .banner .right .banner_tab:first-of-type {
+    background-color: #f04844;
+}
+/*    左右按钮******************************** */
+.container .banner .right ul li {
+    display: flex;
+}
+.btn_left, .btn_right {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.137);
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    border-radius: 50%;
+}
+.btn_left {
+    left: 260px;
+    transform: rotate(180deg);
+}
+.btn_right {
+    right: 30px;
+}
+.btn_left img, .btn_right img {
+    width: 35px;
+}
+.btn_right img {
+    margin-left: -2px;
+}
+.btn_left img {
+    margin-left: -3px;
+}
+/* 品牌制造商********************************************** */
+.container .ppzzs {
+    width: 1200px;
+    /* height: 600px; */
+    margin: 0 auto;
+    /* border: solid 1px red; */
+}
+.container .ppzzs .title {
+    width: 100%;
+    padding: 30px 0;
+    /* border: red 1px solid; */
+    display: flex;
+    align-items: baseline;
+    align-content: space-between;
+    position: relative;
+}
+.container .ppzzs .title strong {
+    font-size: 18px;
+    color: #666;
+}
+.container .ppzzs .title > span:first-of-type {
+    font-size: 12px;
+    color: #999;
+    margin-left: 20px;
+}
+.container .ppzzs .title > span:last-of-type {
+    font-size: 12px;
+    color: #666;
+    position: absolute;
+    right: 0;
+    align-self: center;
+}
+.container .ppzzs .content {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+.container .ppzzs .content .card {
+    padding: 40px 0;
+    width: 285px;
+    height: 250px;
+    background-color: #f2f2f2;
+    position: relative;
+    text-align: center;
+}
+.container .ppzzs .content .card .tag {
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    top: 15px;
+    right: 15px;
+    background-color: orange;
+    font-size: 12px;
+    border-radius: 11px 11px 11px 0;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+}
+.container .ppzzs .content .card strong {
+    font-size: 20px;
+    color: #666;
+    font-weight: normal;
+    width: 100%;
+}
+.container .ppzzs .content .card > p {
+    font-size: 20px;
+    color: #999;
+}
+.container .ppzzs .content .card > span {
+    font-size: 100px;
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    left: 0;
+    color: #d7d7d7;
+}
+/* 秒杀******************************* */
+.container .ms {
+    width: 100%;
+    background-color: #f2f2f2;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+.container .ms .mszq .content .card {
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-content: center; */
+}
+.container .ms .mszq .content .card .tag {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f04844;
+    line-height: 36px;
+    text-decoration: line-through;
+}
+.container .ms .mszq .content .card .icon-image {
+    position: static;
+    margin-top: 10px;
+}
+.container .ms .mszq .content .card .stock {
+    position: relative;
+    width: 120px;
+    height: 20px;
+    border: 1px #f04844 solid;
+    border-radius: 10px;
+    margin-top: 35px;
+}
+.container .ms .mszq .content .card .stock p {
+    display: block;
+    background-color:#f0474460;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+.container .ms .mszq .content .card .stock p span {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    color: #f04844;
+}
+.container .ms .mszq .content .card strong {
+    margin: 12px 0 5px;
+    font-size: 14px;
+    width: 100%;
+    color: #666;
+}
+.container .ms .mszq .content .card > p:first-of-type {
+    width: 100%;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+.container .ms .mszq .content .card .money {
+    width: 100%;
+    font-size: 14px;
+    color: #f04844;
+}
+/* 秒杀时间 */
+.container .ms .mszq .content .time {
+    width: 230px;
+    height: 300px;
+    background-color: #e4e4e4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+}
+.container .ms .mszq .content .time strong {
+    width: 100%;
+    font-size: 28px;
+    color: #666;
+    font-weight: normal;
+}
+.container .ms .mszq .content .time > p {
+    font-size: 14px;
+    color: #999;
+    width: 100%;
+}
+.container .ms .mszq .content .time .times{
+    display: flex;
+    flex-wrap: nowrap;
+    color: #999999;
+}
+.container .ms .mszq .content .time .times div {
+    width: 45px;
+    height: 30px;
+    background-color: #666;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    /* margin-left: 10px; */
+}
+.container .ms .mszq .content .time button {
+    width: 150px;
+    height: 30px;
+    background-color: #f04844;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 新鲜好物 */
+.container .xxhw {
+    margin-top: -40px;
+}
+
+.container .ms .mszq .content .card .tag1 {
+    background-color: orange;
+    width: 50px;
+    height: 20px;
+    font-size: 11px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    color: #fff;
+}
+.container .ms .mszq .content .card .strong1 {
+    margin: 40px 0 5px;
+    font-size: 14px;
+    width: 100%;
+    color: #666;
+}
+
+/* 服装 */
+.container .ppzzs .title1 strong {
+    font-size: 18px;
+    color: #666;
+    font-weight: 600;
+}
+.container .ppzzs .title1 {
+    width: 100%;
+    padding: 30px 0;
+    /* background-color: red; */
+    float: right;
+    align-items: flex-start;
+    align-content: space-between;
+    position: relative;
+}
+.container .fz .title1 li {
+    float: right;
+    font-size: 14px;
+    color: #666666;
+    margin-left: 15px;
+}
+.container .fz .title1 li:first-of-type {
+    margin-left: 40px;
+    font-size: 13px;
+    color: #666666;
+}
+.container .fz .content .card_fz {
+    width: 230px;
+    height: 300px;
+    background-color: #e4e4e4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+    position: relative;
+}
+.container .fz .content .card_fz strong {
+    width: 100%;
+    font-size: 20px;
+    color: #666666;
+    position: absolute;
+    top: 50px;
+}
+.container .fz .content .card_fz p {
+    width: 100%;
+    font-size: 14px;
+    color: #999999;
+    position: absolute;
+    top: 90px;
+}
+.container .fz .content .card_fz span {
+    font-size: 72px;
+    color: #fff ;
+    position: absolute;
+    top: 160px;
+}
+.container .fz .content .card_fz .tag1{
+    width: 60px;
+    height: 60px;
+    background-color: #f04844;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    left: 130px;
+    top: 130px;
+    padding: 10px 0;
+}
+.container .fz .content > div {
+    margin-bottom: 20px;
+}   
+.container .fz .content .card_fz button {
+    width: 150px;
+    height: 30px;
+    background-color: #f04844;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+}
+.container .fz .content .card_fz button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    left: 105px;
+    top: 6px; 
+}
+.container .fz .content .card_fz .jiage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 28px;
+    font-weight: 600;
+    top: 130px; 
+    color: #f04844;
+}
+/* 专题********************************* */
+.container .ms .content_zt {
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.container .ms .content_zt .card {
+    width: 385px;
+    height: 328px; 
+    text-align: center;
+    background-color: #fff;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: red; */
+}
+.container .ms .content_zt .card .icon-image {
+    width: 100%;
+    height: 200px;
+    background-color: #e4e4e4;
+    font-size: 100px;
+    line-height: 200px;
+    color: #fff;
+}
+.container .ms .content_zt .card .titles {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: solid 1px #f2f2f2;
+    padding: 10px 20px;
+    text-align: left;
+    position: relative;
+}
+
+.container .ms .content_zt .card .titles p {
+    font-size: 16px;
+    color: #666;
+}
+.container .ms .content_zt .card .titles p:first-of-type {
+    font-size: 16px;
+    color: #666;
+}
+
+.container .ms .content_zt .card .titles p:last-of-type {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.container .ms .content_zt .card .titles span {
+    font-size: 14px;
+    color: #f04844;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+}
+
+.container .ms .content_zt .card .bar{
+    text-align: left;
+    width: 100%;
+    color: #999;
+    font-size: 12px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.container .ms .content_zt .card .bar span:first-of-type {
+    margin-right: 20px;
+}
+
+.container .ms .content_zt .card .bar span:last-of-type {
+    position: absolute;
+    right: 20px;
+}
+
+/* 大家都在说 */
+.container .say {
+    background-color: #f1f1f1;
+    padding-bottom: 50px;
+}
+
+.container .title1 .more {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.container .say .content_say {
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;   
+    width: 100%; 
+}
+
+.container .say .content_say .card {
+    width: 385px;
+    height: 380px; 
+    text-align: left;
+    background-color: #fff;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #FFF;
+    position: relative;
+}
+
+.container .say .content_say .card .icon-image {
+    width: 100%;
+    height: 200px;
+    font-size: 100px;
+    color: #FFF;
+    line-height: 200px;
+    background-color: #e4e4e4;
+    text-align: center;
+}
+
+.container .say .content_say .card .titles .time {
+    font-size: 14px;
+    color: #999;
+    width: 100%;
+    position: absolute;
+    left: 20px;
+    top: 230px;
+}
+
+.container .say .content_say .card .titles .title span {
+    font-size: 16px;
+    color: #666;
+}
+
+.container .say .content_say .card .titles .title span:last-of-type {
+    font-size: 16px;
+    color: #f04844;
+    right: 20px;
+}
+
+.container .say .content_say .card .titles .content {
+    font-size: 12px;
+    color: #999;
+    padding: 0 20px;
+    /* background-color: red; */
+}

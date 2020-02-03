@@ -1,0 +1,146 @@
+/* 商品卡片 */
+.card {
+    text-align: center;
+    position: relative;
+    width: 230px;
+    height: 300px;
+    border: 1px solid rgba(228, 228, 228, 1);
+    margin-bottom: 20px;
+}
+.card span {
+    display: block;
+    margin-top: 50px;
+    font-size: 100px;
+    color: #e4e4e4;
+}
+.card strong {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    margin-top: 30px;
+}
+.card p {
+    width: 100%;
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+.card div {
+    width: 50px;
+    height: 20px;
+    background-color: red;
+    font-size: 11px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -25px;
+    line-height: 20px;
+}
+.card .price {
+    font-size: 14px;
+    color: red;
+    margin-top: 20px;
+}
+
+/* 当前所处位置 */
+.cur_position {
+    width: 1200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.cur_position span {
+    float: left;
+}
+.cur_position span:not(:last-child) {
+    color: #999;
+}
+.cur_position span:not(:last-child):hover {
+    color: #1abc9c;
+}
+
+/* 同类商品推荐 */
+.recommend_product {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .recommend_product .content {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .recommend_product .content .title {
+    width: 100%;
+    color: #999;
+    font-size: 16px;
+    padding-left: 20px;
+    line-height: 50px;
+    height: 50px;
+    border-bottom:  1px solid #dbdbdb;
+  }
+  .recommend_product .content .box {
+    /* 266*4 */
+    width: 1064px;
+    overflow: hidden;
+    position: relative;
+  }
+  .recommend_product .content .content_card {
+    /* margin-left: -1064px; */
+    width: 10700px;
+    height: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  /* 左右按钮 */
+  .recommend_product .content > span {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    color: rgb(202, 202, 202);
+  
+  }
+  .recommend_product .content .left {
+    left: 10px;
+  }
+  .recommend_product .content .right {
+    right: 10px;
+  }
+
+  /*  商品加减 */
+  /*  数量 */
+.num span  {
+  font-size: 20px;
+  width: 35px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #dbdbdb;
+  font-weight: bold;
+  color: #ccc;
+}
+.num input  {
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #dbdbdb;
+  color: #999;
+}

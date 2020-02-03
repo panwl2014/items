@@ -1,0 +1,168 @@
+body {
+    background-color: #f7f7f7;
+}
+/* 当前位置 */
+.container .classify {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #666;
+}
+
+/* 分类内容 */
+.container .classify .content {
+    width: 1200px;
+    height: 220px;
+    background-color: #fff;
+    border: 1px solid rgba(228, 228, 228, 1);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.container .classify .content ol {
+    margin-left: 65px;
+    display: flex;
+    align-items: center;
+    width: 1070px;
+    height: 50px;
+    border-bottom: 1px solid rgba(228, 228, 228, 1);
+}
+.container .classify .content ol li {
+    text-align: left;
+    padding-left: 10px;
+    margin-left: 10px;
+    width: 65px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.container .classify .content ol li:first-of-type {
+    color: #999;
+    padding: 0;
+}
+.container .classify .content ol li:nth-of-type(2) {
+    color: #1abc9c;
+}
+.container .classify .content ol li:not(:first-of-type):hover {
+    color: #1abc9c;
+}
+.container .classify .content ol:last-of-type {
+    border: none;
+}
+
+/* 商品列表 */
+.container .product {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.container .product .content {
+    width: 1200px;
+    background-color: #fff;
+    border: 1px solid rgba(228, 228, 228, 1);
+
+}
+.container .product .content> div {
+    width: 1200px;
+    padding: 0 65px;
+    text-align: center;
+}
+/* 排序 */
+.container .product .content .sort {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    color: #999;
+    font-size: 12px;
+    position: relative;
+}
+
+.container .product .content .sort span {
+    width: 80px;
+    height: 28px;
+    border: 1px solid rgba(228, 228, 228, 1);
+    margin-right: 10px;
+    line-height: 28px;
+}
+.container .product .content .sort .check input {
+    margin-left: 20px;
+}
+.container .product .content .sort .check {
+    position: absolute;
+    right: 65px;
+}
+.container .product .content .sort .cur {
+    color: #fff;
+    background-color: #1abc9c;
+    border: none;
+}
+
+/* 鼠标移入 */
+.container .product .content .sort span:not(.cur):hover {
+    color: #1abc9c;
+}
+.container .product .content .sort p label:hover {
+    color: #1abc9c;
+}
+
+/* 商品列表 */
+.container .product .content .product_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* 页签 */
+.container .product .content .page {
+    width: 1200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.container .product .content .page span {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid rgba(228, 228, 228, 1);
+    margin: 0 5px;
+    line-height: 35px;
+    border-radius: 3px;
+    color: #999; 
+}
+.container .product .content .page strong{
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid rgba(228, 228, 228, 1);
+    margin: 0 5px;
+    line-height: 35px;
+    border-radius: 3px;
+    color: #999; 
+    font-weight: normal;
+}
+.container .product .content .page .page_up {
+    width: 80px;
+    color: rgb(194, 194, 194);
+}
+.container .product .content .page .page_down {
+    width: 80px;
+}
+.container .product .content .page .cur {
+    background-color:#1abc9c;
+    color: #fff;
+    border: none;
+}
+.container .product .content .page span:not(.cur):hover {
+    color: #1abc9c;
+    border: 1px solid #1abc9c;
+}
+.container .product .content .page .page_down:hover {
+    color: #1abc9c;
+    border: 1px solid #1abc9c;
+}
