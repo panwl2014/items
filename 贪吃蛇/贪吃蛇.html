@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .col {
+            width: 50px;
+            height: 50px;
+            float: left;
+            border: 1px solid #999;
+            box-sizing: border-box;
+        }
+        body > div {
+            width: 500px;
+            height: 500px;
+            box-sizing: border-box;
+            /* border: 1px solid #999; */
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <script src="js/Food.js"></script>
+    <script src="js/Snake.js"></script>
+    <script src="js/Stone.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Map.js"></script>
+    <script>
+    // 地图
+    var map = new Map(500, 500, 10, 10);
+    // 食物
+    var food = new Food('img/food.jpg', 2, 2);
+    // 障碍物
+    var stone = new Stone('img/block.png');
+    // 蛇
+    var imgs = {
+        head: ['img/1.png', 'img/2.png', 'img/3.png', 'img/4.png'],
+        body: 'img/5.png',
+        tail: ['img/6.png', 'img/7.png', 'img/8.png', 'img/9.png']
+    }
+    var snake = new Snake(imgs);
+    // 游戏
+    var game = new Game(map, food, stone, snake);
+    </script>
+</body>
+</html>
