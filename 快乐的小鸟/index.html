@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        canvas {
+            border: 1px solid #000;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="360" height="512"></canvas>
+    <!-- <img src="images/land.png" alt=""> -->
+    <script src="js/Bg.js"></script>
+    <script src="js/bird.js"></script>
+    <script src="js/Land.js"></script>
+    <script src="js/Pipe.js"></script>
+    <script src="js/Game.js"></script>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        
+        var imgArr = ['images/bg_day.png', 'images/land.png', 'images/pipe_down.png', 'images/pipe_up.png', 'images/bird0_0.png', 'images/bird0_1.png', 'images/bird0_2.png'];
+        var imgs = [];
+        // var idx = 0;
+        imgArr.forEach(function(value, index) {
+            var img = new Image();
+            img.src = value;
+            imgs.push(img);
+            img.onload = function() {
+                if (index == imgArr.length - 1) {
+                    // 开始游戏
+                    // 背景
+                    var bg = new Bg(imgs[0], 0, 0, 1);
+        
+                    // 陆地
+                    var land = new Land(imgs[1], 0, 400, 3);
+
+                    // 管子
+                    var pipe = new Pipe(imgs[2], imgs[3], canvas.width, 0, 3);
+
+                    // 小鸟
+                    var bird = new Bird(imgs.slice(4, 7), 80, 50, 1);
+
+                    // Game
+                    var game = new Game(land, bird, bg, pipe, ctx);
+                    console.log(canvas.width);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
